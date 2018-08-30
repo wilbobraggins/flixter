@@ -4,6 +4,11 @@ class LessonsController < ApplicationController
   def show
   end
 
+  def update
+    current_lesson.update_attributes(lesson_params)
+    render plain: 'updated'
+  end
+
   private
 
   def authenticate_user_enrolled?
@@ -15,5 +20,9 @@ class LessonsController < ApplicationController
   helper_method :current_lesson
   def current_lesson
     @current_lesson ||= Lesson.find(params[:id])
+  end
+
+  def lesson_params
+    params.require(:lesson).permit(:row_order_position)
   end
 end

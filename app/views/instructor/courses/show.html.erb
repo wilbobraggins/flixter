@@ -10,8 +10,21 @@
         });
       }    
     });
+  $('.sections').sortable({
+      update: function( event, ui ) {
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { section: { row_order_position: ui.item.index() } }
+        });
+      }
+    });
+
   });
 </script>
+
+
 
 <br />
 <div class="booyah-box col-10 offset-1">
@@ -29,8 +42,8 @@
   <br />
 
   <ul class="sections">
-    <% current_course.sections.each do |section| %>
-      <li class="section-li">
+    <% current_course.sections.rank(:row_order).each do |section| %>
+      <li data-updated-url="<%= instructor_section_path(section) %>">
         <div class="header">
           <span class="fa fa-ellipsis-v"></span>
           <%= section.title %>

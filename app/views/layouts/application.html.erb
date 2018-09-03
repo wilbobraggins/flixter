@@ -56,11 +56,47 @@
     
     <div id="footer">
       <div class="container">
-        <b>Teachers</b>
-        <br />
-        <%= link_to 'Teach a Course', new_instructor_course_path %>
+        <div class="row">
+          <div class="col-12 col-sm-3">
+            <b>Teachers</b>
+            <br />
+            <%= link_to 'Teach a Course', new_instructor_course_path %>
+            <br />
+            <%= link_to 'My Dashboard', dashboard_path %>
+          </div>
+          <div class="col-12 col-sm-3">
+            <b>About</b>
+            <br />
+            <%= link_to 'Team', '#' %>
+            <br />
+            <%= link_to 'Careers', '#' %>
+            <br />
+            <%= link_to 'Privacy Policy', '#' %>
+        </div>
+        <div class="col-12 col-sm-3"> 
+          <b>Contact</b>
+          <br />
+          wilbobraggins@gmail.com
+          <br />
+          1340 SE 89th ave
+          <br />
+          Portland OR, 97214
+        </div>
+        <div class="col-12 col-sm-3 social">
+          <b>Social</b>
+          <br />
+          <br />
+          <%= link_to 'https://github.com/wilbobraggins' do %>
+            <span class="fa fa-github-square fa-2x social-button"></span>
+          <% end %>
+          <%= link_to 'https://www.instagram.com/tinyhousetruck/' do %>
+            <span class="fa fa-instagram fa-2x social-button"></span>
+          <% end %>  
+          <span class="fa fa-twitter-square fa-2x social-button"></span>
+        </div>
       </div>
-    </div> 
+    </div>
+  </div>
 
     <script src="https://vjs.zencdn.net/7.1.0/video.js"></script>
      

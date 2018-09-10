@@ -17,6 +17,7 @@
     });
   $('.sections').sortable({
       update: function( event, ui ) {
+        console.log(ui.item.data('update-url'))
         $.ajax({
           type: 'PUT',
           url: ui.item.data('update-url'),
@@ -51,7 +52,7 @@
 
   <ul class="sections">
     <% current_course.sections.rank(:row_order).each do |section| %>
-      <li data-updated-url="<%= instructor_section_path(section) %>">
+      <li data-update-url="<%= instructor_section_path(section) %>">
         <div class="header float-left">
           <span class="fa fa-ellipsis-v"></span>
           <%= section.title %>

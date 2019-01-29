@@ -15,7 +15,7 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <%= link_to 'Flixter', root_url, class: 'navbar-brand' %>
+  <%= link_to 'Belly Fit', root_url, class: 'navbar-brand' %>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-md-0">
@@ -57,15 +57,14 @@
     <div id="footer">
       <div class="container">
         <div class="row">
+          <% if current_user == @admin %>
           <div class="col-12 col-sm-3">
-            
             <b>Teachers</b>
-            <br />
-            <%= link_to 'Teach a Course', new_instructor_course_path %>
-            <br />
-            
+              <br />
+              <%= link_to 'Teach a Course', new_instructor_course_path %>
+          <% end %>
+              <br />  
             <%= link_to 'My Dashboard', dashboard_path %>
-            
           </div>
           <div class="col-12 col-sm-3">
             <b>About</b>
@@ -91,9 +90,10 @@
           <br />
           <%= link_to 'https://github.com/wilbobraggins' do %>
             <span class="fa fa-github-square fa-2x social-button"></span>
-          <% end %>
+          <% end %>  
+        
           <%= link_to 'https://www.instagram.com/tinyhousetruck/' do %>
-            <span class="fa fa-instagram fa-2x social-button"></span>
+            <span class="fa fa-instagram fa-2x social-button"></span> 
           <% end %>  
           <span class="fa fa-twitter-square fa-2x social-button"></span>
         </div>

@@ -5,6 +5,8 @@ class Instructor::CoursesController < ApplicationController
   def new
     if current_user.admin?
       @course = Course.new
+    else
+      render plain: "Unauthorized", status: :unauthorized
     end
   end
 

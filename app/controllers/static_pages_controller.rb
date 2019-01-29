@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   
   def index
+    @admin = User.find_by(:admin => true)
   end
 
   def privacy

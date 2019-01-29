@@ -14,6 +14,7 @@ class Instructor::LessonsController < ApplicationController
     render plain: 'Udated!'
   end
 
+
   private
 
     def require_authorized_for_current_lesson
@@ -38,6 +39,6 @@ class Instructor::LessonsController < ApplicationController
   end
 
   def lesson_params
-    params.require(:lesson).permit(:title, :subtitle, :video, :row_order_position)
+    params.require(:lesson).permit(:title, :subtitle, :video, :row_order_position, :destroy)
   end
 end

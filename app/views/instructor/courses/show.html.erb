@@ -35,7 +35,7 @@
 <br />
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center"><%= current_course.title %></h1>
-  <%= image_tag 'devops.jpg', class:"img-fluid" %>
+  <%= image_tag current_course.image, class:"img-fluid" %>
   <br />
   <br />
   <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning float-right' %>
@@ -87,6 +87,11 @@
           </ul>
         <br class="clr" />
       </li>
+       
+       <% if false %>
+       <%= link_to 'Delete', instructor_lesson_path(@lesson), class:'btn btn-danger btn-large', method: :delete, data: { confirm: "You sure?" } %>
+       <% end %>
+
     <% end %>
   </ul>
 

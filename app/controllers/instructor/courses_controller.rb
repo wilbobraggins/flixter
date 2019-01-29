@@ -1,9 +1,11 @@
 class Instructor::CoursesController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_authorized_for_current_course, only: [:show]
+  before_action :require_authorized_for_current_course, only: [:show, :destroy]
 
   def new
-    @course = Course.new
+    if current_user.admin?
+      @course = Course.new
+    end
   end
 
   def create
@@ -18,6 +20,17 @@ class Instructor::CoursesController < ApplicationController
   def show
     @section = Section.new
     @lesson = Lesson.new
+    @course = Course.new
+  end
+
+  def destroy
+    if current_course.user != current_user
+      render plain: "Unauthorized", status: :unauthorized
+    else
+      Course.find(params[:id]).destroy
+        #flash[:success] = "Course deleted."
+        redirect_to instructor_course_path(@course)
+    end
   end
 
   private

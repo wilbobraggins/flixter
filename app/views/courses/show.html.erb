@@ -3,7 +3,7 @@
 
 <div class="booyah-box col-10 offset-1">
   <h1><%= @course.title %></h1>
-  <%= image_tag 'html.jpg', class: 'img-fluid' %>
+  <%= image_tag @course.image, class: 'img-fluid' %>
   <br />
   <div class="row">
     <div class="col-sm-4 col-12">
@@ -15,8 +15,11 @@
         <br />
         <br />
         <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
-      <% end %>
+       <%= link_to 'Delete', instructor_course_path(@course), class:'btn btn-danger btn-large', method: :delete, data: { confirm: "You sure?" } %>
 
+
+
+      <% end %>
       <br />
       <br />
 

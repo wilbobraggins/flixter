@@ -1,13 +1,8 @@
 Rails.application.configure do
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :authentication => :plain,
-    :address => "smtp.mailgun.org",
-    :port => 587,
-    :domain => "sandbox75ba6317ecd54861885ae68b45939d43.mailgun.org",
-    :user_name => "postmaster@sandbox75ba6317ecd54861885ae68b45939d43.mailgun.org",
-    :password => "2918741b95d30461e1d2ac4aea93b7de-c8c889c9-caf3aee2"
-
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: ENV["MAILGUN_API_KEY"],
+    domain: "sandbox75ba6317ecd54861885ae68b45939d43.mailgun.org"
   }
   # Settings specified here will take precedence over those in config/application.rb.
 

@@ -49,7 +49,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Livereload for faster development without restarting
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
-  
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -73,4 +73,5 @@ gem 'stripe'
 gem 'ranked-model'
 gem 'jquery-ui-rails'
 gem 'font-awesome-rails'
+gem 'sendgrid-ruby'
 

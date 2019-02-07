@@ -6,7 +6,6 @@ class ModelMailer < ApplicationMailer
   #   en.model_mailer.new_user_notification.subject
   #
   require 'sendgrid-ruby'
-  include SendGrid
 
   #from = Email.new(email: 'test@example.com')
   #to = Email.new(email: 'test@example.com')

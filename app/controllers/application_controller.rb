@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     @user = User.new(:email)
 
     if @user.save
-      ModelMailer.new_record_notification(@user).deliver_now
+      ModelMailer.new_user_notification(@user).deliver
       format.html { redirect_to @user }
     end
   end

@@ -8,7 +8,7 @@ class ModelMailer < ApplicationMailer
   require 'sendgrid-ruby'
 
   def new_user_notification
-    @user = User.find_by(:id => 6)
+    @user = User.find_by(:id => 1)
     mail(to: @user.email, 
          subject: "Welcome #{@user.email}")
   end

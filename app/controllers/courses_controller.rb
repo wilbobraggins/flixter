@@ -1,5 +1,4 @@
 class CoursesController < ApplicationController
-  include Admin 
 
   def index
     @courses = Course.all

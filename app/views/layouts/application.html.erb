@@ -57,7 +57,8 @@
     <div id="footer">
       <div class="container">
         <div class="row">
-          <% if current_user.admin? %>
+          <% if user_signed_in? %>
+          <% if user_signed_in? && current_user.admin? %>
           <div class="col-12 col-sm-3">
             <b>Teachers</b>
               <br />
@@ -75,6 +76,7 @@
             <br />
             <%= link_to 'Privacy Policy', privacy_path %>
         </div>
+        <% end %>
         <div class="col-12 col-sm-3"> 
           <b>Contact</b>
           <br />

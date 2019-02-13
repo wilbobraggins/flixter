@@ -57,13 +57,12 @@
     <div id="footer">
       <div class="container">
         <div class="row">
-          <% if user_signed_in? %>
+         
           <% if user_signed_in? && current_user.admin? %>
           <div class="col-12 col-sm-3">
             <b>Teachers</b>
               <br />
               <%= link_to 'Teach a Course', new_instructor_course_path %>
-          <% end %>
               <br />  
             <%= link_to 'My Dashboard', dashboard_path %>
           </div>
@@ -76,7 +75,6 @@
             <br />
             <%= link_to 'Privacy Policy', privacy_path %>
         </div>
-        <% end %>
         <div class="col-12 col-sm-3"> 
           <b>Contact</b>
           <br />
@@ -99,6 +97,43 @@
           <% end %>  
           <span class="fa fa-twitter-square fa-2x social-button"></span>
         </div>
+        <% else %>
+        <div class="row">
+          <%= link_to 'My Dashboard', dashboard_path %>
+          <div class="col-12 col-sm-4">
+            <b>About</b>
+            <br />
+            <%= link_to 'Team', team_path %>
+            <br />
+            <%= link_to 'Careers', career_path %>
+            <br />
+            <%= link_to 'Privacy Policy', privacy_path %>
+          </div>
+        </div>
+          <div class="col-12 col-sm-4"> 
+            <b>Contact</b>
+            <br />
+            wilbobraggins@gmail.com
+            <br />
+            1340 SE 89th ave
+            <br />
+            Portland OR, 97214
+          </div>
+          <div class="col-12 col-sm-4 social">
+            <b>Social</b>
+            <br />
+            <br />
+            <%= link_to 'https://github.com/wilbobraggins' do %>
+              <span class="fa fa-github-square fa-2x social-button"></span>
+            <% end %>  
+          
+            <%= link_to 'https://www.instagram.com/tinyhousetruck/' do %>
+              <span class="fa fa-instagram fa-2x social-button"></span> 
+            <% end %>  
+            <span class="fa fa-twitter-square fa-2x social-button"></span>
+          </div>
+
+        <% end %>
       </div>
     </div>
   </div>

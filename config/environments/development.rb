@@ -1,16 +1,5 @@
 Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
-
-  ActionMailer::Base.smtp_settings = {
-  :user_name => 'william.marchek@gmail.com',
-  :password => ENV["SENDPASS"],
-  :domain => 'https://flixter-will-marchek.herokuapp.com',
-  :address => 'smtp.sendgrid.net',
-  :port => 587,
-  :authentication => :plain,
-  :enable_starttls_auto => true
-}
-
   config.action_mailer.default_url_options = {host: 'localhost:3030'}
   # Settings specified here will take precedence over those in config/application.rb.
 

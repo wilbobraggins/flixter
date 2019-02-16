@@ -1,11 +1,13 @@
 Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'flixter-will-marchek.herokuapp.com' }
+  
+  ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-  :user_name => 'william.marchek@gmail.com',
-  :password => ENV["SENDPASS"],
+  :user_name => ENV["SENDGRID_USERNAME"],
+  :password => ENV["SENDGRID_PASSWORD"],
   :domain => 'https://flixter-will-marchek.herokuapp.com',
   :address => 'smtp.sendgrid.net',
-  :port => 587,
+  :port => "25",
   :authentication => :plain,
   :enable_starttls_auto => true
   }

@@ -74,4 +74,5 @@ gem 'ranked-model'
 gem 'jquery-ui-rails'
 gem 'font-awesome-rails'
 gem 'sendgrid-ruby'
+gem 'omniauth-google-oauth2'
 

@@ -1,24 +1,12 @@
-# README
+Flix
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Two-Sided Video Streaming Site Featuring:
 
-Things you may want to cover:
+* Credit Card Payments
 
-* Ruby version
+* User-Role Management
 
-* System dependencies
+* Third Party API 
 
-* Configuration
+* Advanced Database Relationships 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

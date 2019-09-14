@@ -67,7 +67,7 @@ gem 'devise', ">= 4.7.1"
 gem 'carrierwave', '~> 1.0'
 gem 'figaro'
 gem 'fog-aws'
-gem 'mini_magick'
+gem "mini_magick", ">= 4.9.4"
 gem 'carrierwave-aws'
 gem 'stripe'
 gem 'ranked-model'

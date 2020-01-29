@@ -40,20 +40,20 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
-    autoprefixer-rails (9.6.1.1)
+    autoprefixer-rails (9.7.4)
       execjs
     aws-eventstream (1.0.3)
-    aws-partitions (1.220.0)
-    aws-sdk-core (3.68.0)
+    aws-partitions (1.269.0)
+    aws-sdk-core (3.89.1)
       aws-eventstream (~> 1.0, >= 1.0.2)
-      aws-partitions (~> 1.0)
+      aws-partitions (~> 1, >= 1.239.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-kms (1.24.0)
-      aws-sdk-core (~> 3, >= 3.61.1)
+    aws-sdk-kms (1.28.0)
+      aws-sdk-core (~> 3, >= 3.71.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.48.0)
-      aws-sdk-core (~> 3, >= 3.61.1)
+    aws-sdk-s3 (1.60.1)
+      aws-sdk-core (~> 3, >= 3.83.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
     aws-sigv4 (1.1.0)
@@ -64,13 +64,8 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
-<<<<<<< HEAD
-    builder (3.2.3)
-    byebug (11.0.1)
-=======
     builder (3.2.4)
-    byebug (11.0.0)
->>>>>>> 473ca6a49585896c430afbbaed11a50e8781505a
+    byebug (11.1.1)
     carrierwave (1.3.1)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -87,13 +82,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
-<<<<<<< HEAD
-    crass (1.0.4)
-=======
-    connection_pool (2.2.2)
-    loofah-2.3.1
     crass (1.0.6)
->>>>>>> 473ca6a49585896c430afbbaed11a50e8781505a
     devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -105,15 +94,11 @@ GEM
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
     eventmachine (1.2.7)
-<<<<<<< HEAD
-    excon (0.71.0)
-=======
-    excon (0.71.0)
->>>>>>> 7d3223bbc8fcdc992caf19e5e0ca7965ccef002d
+    excon (0.72.0)
     execjs (2.7.0)
-    faraday (0.15.4)
+    faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
-    ffi (1.11.1)
+    ffi (1.12.1)
     figaro (1.1.1)
       thor (~> 0.14)
     fog-aws (3.5.2)
@@ -121,9 +106,9 @@ GEM
       fog-json (~> 1.1)
       fog-xml (~> 0.1)
       ipaddress (~> 0.8)
-    fog-core (2.1.2)
+    fog-core (2.2.0)
       builder
-      excon (~> 0.58)
+      excon (~> 0.71)
       formatador (~> 0.2)
       mime-types
     fog-json (1.2.0)
@@ -137,7 +122,7 @@ GEM
     formatador (0.2.5)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    guard (2.15.1)
+    guard (2.16.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
       lumberjack (>= 1.0.12, < 2.0)
@@ -154,11 +139,7 @@ GEM
       multi_json (~> 1.8)
     hashie (3.6.0)
     http_parser.rb (0.6.0)
-<<<<<<< HEAD
-    i18n (1.6.0)
-=======
     i18n (1.8.2)
->>>>>>> 473ca6a49585896c430afbbaed11a50e8781505a
       concurrent-ruby (~> 1.0)
     ipaddress (0.8.3)
     jbuilder (2.9.1)
@@ -174,51 +155,32 @@ GEM
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-<<<<<<< HEAD
-    loofah (2.3.0)
-=======
-    loofah (2.3.1)
->>>>>>> 473ca6a49585896c430afbbaed11a50e8781505a
+    loofah (2.4.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    lumberjack (1.0.13)
+    lumberjack (1.2.1)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     method_source (0.9.2)
-    mime-types (3.3)
+    mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.0904)
-    mini_magick (4.9.5)
+    mime-types-data (3.2019.1009)
+    mini_magick (4.10.1)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-<<<<<<< HEAD
-    minitest (5.12.2)
-=======
     minitest (5.14.0)
->>>>>>> 473ca6a49585896c430afbbaed11a50e8781505a
-    multi_json (1.13.1)
+    multi_json (1.14.1)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     nenv (0.3.0)
-<<<<<<< HEAD
     nio4r (2.5.2)
-=======
-    net-http-persistent (3.0.0)
-      connection_pool (~> 2.2)
-    nio4r (2.3.1)
-<<<<<<< HEAD
->>>>>>> 2792b0b495de783693f4d93f4889c86c59d52e37
-    nokogiri (1.10.4)
-=======
-    loofah-2.3.1
     nokogiri (1.10.7)
->>>>>>> 473ca6a49585896c430afbbaed11a50e8781505a
       mini_portile2 (~> 2.4.0)
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
-    oauth2 (1.4.1)
-      faraday (>= 0.8, < 0.16.0)
+    oauth2 (1.4.3)
+      faraday (>= 0.8, < 2.0)
       jwt (>= 1.0, < 3.0)
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
@@ -234,25 +196,13 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
     orm_adapter (0.5.0)
-    pg (1.1.4)
-    popper_js (1.14.5)
+    pg (1.2.2)
+    popper_js (1.14.7)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-<<<<<<< HEAD
-<<<<<<< HEAD
-    puma (3.12.1)
-    rack (2.0.8)
-=======
-    puma (3.12.1)
-    rack (2.0.8)
-=======
     puma (3.12.2)
     rack (2.1.2)
->>>>>>> 473ca6a49585896c430afbbaed11a50e8781505a
-    rack-protection (2.0.5)
-      rack
->>>>>>> 7d3223bbc8fcdc992caf19e5e0ca7965ccef002d
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.7.2)
@@ -271,27 +221,19 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-<<<<<<< HEAD
-    rails-html-sanitizer (1.2.0)
-      loofah (~> 2.2, >= 2.2.2)
+    rails-html-sanitizer (1.3.0)
+      loofah (~> 2.3)
     railties (5.0.7.2)
       actionpack (= 5.0.7.2)
       activesupport (= 5.0.7.2)
-=======
-    rails-html-sanitizer (1.3.0)
-      loofah (~> 2.3)
-    railties (5.0.7.1)
-      actionpack (= 5.0.7.1)
-      activesupport (= 5.0.7.1)
->>>>>>> 473ca6a49585896c430afbbaed11a50e8781505a
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (13.0.0)
-    ranked-model (0.4.4)
-      activerecord (>= 4.1.16)
+    rake (13.0.1)
+    ranked-model (0.4.5)
+      activerecord (>= 4.2)
     rb-fsevent (0.10.3)
-    rb-inotify (0.10.0)
+    rb-inotify (0.10.1)
       ffi (~> 1.0)
     rb-readline (0.5.5)
     responders (3.0.0)
@@ -317,10 +259,10 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    sendgrid-ruby (6.0.0)
+    sendgrid-ruby (6.0.4)
       ruby_http_client (~> 3.3.0)
     shellany (0.0.1)
-    simple_form (5.0.0)
+    simple_form (5.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
     spring (2.1.0)
@@ -334,7 +276,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stripe (5.2.0)
+    stripe (5.14.0)
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -395,4 +337,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.17.3
+   1.17.2

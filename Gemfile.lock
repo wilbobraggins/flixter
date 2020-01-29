@@ -94,7 +94,11 @@ GEM
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
     eventmachine (1.2.7)
-    excon (0.67.0)
+<<<<<<< HEAD
+    excon (0.71.0)
+=======
+    excon (0.71.0)
+>>>>>>> 7d3223bbc8fcdc992caf19e5e0ca7965ccef002d
     execjs (2.7.0)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
@@ -207,8 +211,15 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+<<<<<<< HEAD
     puma (3.12.1)
-    rack (2.0.7)
+    rack (2.0.8)
+=======
+    puma (3.12.1)
+    rack (2.0.8)
+    rack-protection (2.0.5)
+      rack
+>>>>>>> 7d3223bbc8fcdc992caf19e5e0ca7965ccef002d
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.7.2)

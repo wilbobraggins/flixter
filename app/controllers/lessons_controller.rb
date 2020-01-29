@@ -1,7 +1,8 @@
 class LessonsController < ApplicationController
   before_action :authenticate_user!
-  before_action :authenticate_user_enrolled?
+  before_action :authenticate_user_enrolled? unless :user_admin?
   def show
+    current_lesson
   end
 
   def update
@@ -14,6 +15,12 @@ class LessonsController < ApplicationController
   def authenticate_user_enrolled?
     if !current_user.enrolled_in?(current_lesson.section.course)
       redirect_to course_path(@current_course), alert: "You Must Enroll to View!"
+    end
+  end
+
+  def user_admin?
+    if current_user.find(params[:admin]) == true
+      redirect_to course_path
     end
   end
 

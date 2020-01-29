@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   resource :dashboard, only: [:show]
   root 'static_pages#index'
-  get 'privacy', to: 'static_pages#privacy'
+  get 'demo', to: 'static_pages#demo'
   get 'team', to: 'static_pages#team'
   get 'career', to: 'static_pages#career'
   resources :courses, only: [:index, :show] do

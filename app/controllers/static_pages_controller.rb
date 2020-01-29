@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
   def index
   end
 
-  def privacy
+  def demo
   end
 
   def team

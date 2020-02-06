@@ -152,6 +152,7 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     jwt (2.2.1)
+    libv8 (7.3.492.27.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -168,6 +169,8 @@ GEM
     mini_magick (4.10.1)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
+    mini_racer (0.2.9)
+      libv8 (>= 6.9.411)
     minitest (5.14.0)
     multi_json (1.14.1)
     multi_xml (0.6.0)
@@ -308,7 +311,7 @@ DEPENDENCIES
   carrierwave-aws
   coffee-rails (~> 4.2)
   devise (>= 4.7.1)
-  figaro
+  figaro (~> 1.1, >= 1.1.1)
   fog-aws
   font-awesome-rails
   guard-livereload (~> 2.5, >= 2.5.2)
@@ -317,6 +320,7 @@ DEPENDENCIES
   jquery-ui-rails
   listen (~> 3.0.5)
   mini_magick (>= 4.9.4)
+  mini_racer
   omniauth-google-oauth2
   pg (>= 0.18, < 2.0)
   popper_js (~> 1.14.3)
